@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz</title>
+
+<body>
+
+<style>
+    h2 {
+  text-align: center;
+}
+body {
+ background-color:Pink; 
+}
+</style>
+<h2>Please take the following quiz:</h2>
+<br>
+<br>
+<h3>
+<div style="color:blue">What is the capital of Finland?</div>
+</h3>
+<input type = "radio" name = "capital" id ="rd1">Russia
+<input type = "radio" name = "capital"  id ="rd2">Helsinki
+<input type = "radio" name = "capital"  id ="rd3">Kazakstan
+<input type = "radio" name = "capital"  id ="rd4">Stockholm
+<h3>
+<div style="color:blue">What is not a mammal?</div>
+</h3>
+<input type = "radio" name = "mammal" id ="rd5">Cows
+<input type = "radio" name = "mammal"  id ="rd6">Horses
+<input type = "radio" name = "mammal"  id ="rd7">Dolphins
+<input type = "radio" name = "mammal" id ="rd8">Sharks
+<h3>
+<div style="color:blue">What is the average body temperature of a human being?</div>
+</h3>
+<input type = "radio" name = "temp" id ="rd9">41c
+<input type = "radio" name = "temp" id ="rd10">39c
+<input type = "radio" name = "temp" id ="rd11">38c
+<input type = "radio" name = "temp" id ="rd12">37c
+<h3>
+<div style="color:blue">How many times an average person falls in love in a lifetime?</div>
+</h3>
+<input type = "radio" name = "love" id ="rd13"> None at all
+<input type = "radio" name = "love" id ="rd14"> Three times
+<input type = "radio" name = "love" id ="rd15"> Once
+<input type = "radio" name = "love" id ="rd16"> Five times
+<h3>
+<div style="color:blue">What color is the sun?</div>
+</h3>
+<input type = "radio" name = "sun" id ="rd17"> Orange
+<input type = "radio" name = "sun" id ="rd18"> Yellow
+<input type = "radio" name = "sun" id ="rd19"> Red
+<input type = "radio" name = "sun" id ="rd20"> White
+<br>
+<br>
+<input type = "button" value="SUBMIT ANSWERS" id="submit" onclick="calculate()">
+<h3>
+<p id ="p1"></p>
+<p id="p2"></p>
+</h3>
+
+<script>
+
+function calculate(){ //checking all the true answers
+var score = 0
+if(document.getElementById("rd2").checked==true){
+ score += 1
+}
+if(document.getElementById("rd8").checked==true){
+ score += 1
+}
+if(document.getElementById("rd12").checked==true){
+ score += 1
+}
+if(document.getElementById("rd14").checked==true){
+ score += 1
+}
+if(document.getElementById("rd20").checked==true){
+ score += 1
+}
+
+document.getElementById("p1").innerHTML="<b>Your total score is: "+score
+
+if(score<=1){
+ document.getElementById("p2").innerText="Poor performance, try again"
+}
+else if(score<=3){
+	document.getElementById("p2").innerText="Your okay!"
+}
+else if(score<=5){
+ document.getElementById("p2").innerText="Congrats, great performance!"
+}
+}
+
+</script>
+
+</body>
+</head>
+</html>
